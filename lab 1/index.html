@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+</head>
+
+<body>
+
+    <form onsubmit="Validator();">
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" id="userName" required /><br />
+        <br />
+
+        <label></label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="password" required />
+        <br />
+        <button type="submit">Login</button>
+    </form>
+
+    <br>
+
+    <hr />
+
+    <h2>calculator</h2>
+    <input type="text" placeholder="Enter First number" name="Fnum" id="Fnum" /><br />
+    <input type="text" placeholder="Enter secend number" name="Snum" id="Snum" /><br />
+
+    <button onclick="Sum()">sum</button>
+    <button onclick="subtract()">subtract</button>
+    <button onclick="multi()">multi</button>
+    <button onclick="division()">division</button>
+    <button onclick="Mod()">Mod</button>
+
+    <div>
+        The result is:
+        <span id="Result"></span>
+    </div>
+
+    <button onclick="calc2();">Click to calculate</button>
+    <div>
+        The final result is:
+        <span id="Result2"></span>
+    </div>
+    <script src="/lab 1/JS.js"></script>
+</body>
+
+</html>

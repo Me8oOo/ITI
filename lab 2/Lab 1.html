@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab1</title>
+</head>
+
+<body>
+    <h2>Sverage & Sum</h2>
+    <script>
+        var n = [];
+        var nc = parseFloat(window.prompt("Please Enter Total Numbers "));
+
+        for (let i = 0; i < nc; i++) {
+            n[i] = parseFloat(window.prompt("enter number " + (i + 1)));
+        }
+
+        let sum = 0;
+        for (let i = 0; i < nc; i++) {
+            sum += n[i];
+        }
+        var avg = sum / nc;
+        document.write("The entered values: " + n + "<br>");
+        document.write("the number of counts: " + nc + "<br>");
+        document.write("sum: " + sum + "<br>");
+        document.write("Average: " + avg + "<br>");
+        console.log(numbers);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q2</title>
+  </head>
+
+  <body>
+    <button onclick="addContact();">Add contact</button>
+    <script>
+      let contacts = [];
+      function operation() {
+        let operations = window.prompt(
+          "please enter an operation (add,search)"
+        );
+      }
+
+      function addContact() {
+        let name = window.prompt("please enter the full name");
+        let number = parseFloat(window.prompt("please enter the phone number"));
+        let contact = { fullName: name, phoneNumber: number };
+        contacts.push(contact);
+        let div = document.getElementById("test");
+        let li = document.createElement("li");
+        div.appendChild(li);
+        contacts.forEach((element) => {
+          li.innerHTML =
+            "<a> Name: " +
+            element.fullName +
+            " | Phone: " +
+            element.phoneNumber +
+            "</a>";
+        });
+      }
+
+      function Search() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("test");
+        li = ul.getElementsByTagName("li");
+
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+      function searchContact() {
+        let search = window.prompt("search for?");
+      }
+    </script>
+
+    <input
+      type="text"
+      id="myInput"
+      onkeyup="Search()"
+      placeholder="Search for names.."
+      style="border-style: none"
+    />
+    <ul id="test"></ul>
+  </body>
+</html>

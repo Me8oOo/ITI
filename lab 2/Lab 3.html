@@ -1,0 +1,94 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab3</title>
+</head>
+
+<body>
+
+  <script>
+    let shape = window.prompt(
+      "write down the shape (circle,triangle,square,Rectangle,Parallelogram,Trapezium,Ellipse)"
+    );
+    switch (shape) {
+      case "circle":
+        var pi = 3.14;
+        var r = parseFloat(window.prompt("enter the radius value"));
+        var radiusSquare = r * r;
+        var area = pi * radiusSquare;
+        document.write(
+          "the Circle area: " + area + "<br>");
+
+        break;
+      case "triangle":
+        var b = parseFloat(window.prompt("enter base value:"));
+        var h = parseFloat(window.prompt("enter height value"));
+        var area = b * h * 0.5;
+        document.write("the triangle area: " + area + "<br>");
+
+        break;
+      case "square":
+        var a = parseFloat(window.prompt("enter side value:"));
+        var aSquare = a * a;
+        var area = aSquare;
+        document.write(
+          "the square area: " + area + "<br>");
+
+        break;
+
+      case "Rectangle":
+        var length = parseFloat(window.prompt("enter side length:"));
+        var width = parseFloat(window.prompt("enter side width:"));
+
+        var aRectangle = length * width;
+        document.write(
+          "the Rectangle area: " + aRectangle + "<br>"
+        );
+
+        break;
+      case "Parallelogram":
+        var base = parseFloat(window.prompt("enter side base:"));
+        var height = parseFloat(window.prompt("enter side height:"));
+
+        var aParallelogram = base * height;
+        document.write(
+          "the Parallelogram area: " + aParallelogram + "<br>"
+        );
+
+        break;
+
+      case "Trapezium":
+        var a = parseFloat(window.prompt("enter side first parrel side:"));
+        var b = parseFloat(window.prompt("enter side secoend parrel side:"));
+        var height = parseFloat(window.prompt("enter side height:"));
+
+        var aTrapezium = (0.5 * (a + b)) * h;
+        document.write(
+          "the Trapezium area: " + aTrapezium + "<br>"
+        );
+
+        break;
+
+      case "Ellipse":
+        var a = parseFloat(window.prompt("enter  ½ minor axis:"));
+        var b = parseFloat(window.prompt("enter  ½ major axis:"));
+        var pi = 3.14;
+
+        var aEllipse = pi * a * b;
+        document.write(
+          "the Ellipse area: " + aEllipse + "<br>"
+        );
+
+        break;
+
+
+      default:
+        alert("please enter a valid shape name");
+        break;
+    }
+  </script>
+</body>
+
+</html>
